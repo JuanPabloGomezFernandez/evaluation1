@@ -32,7 +32,8 @@ namespace WebApplication1.Models
 
         public int Birthday { get; set; }
         [required]
-        public virtual ICollection< Grade> Grades{ get; set;}
+        public virtual ICollection<Grades> Grades{ get; set;}
+
 
         }
 

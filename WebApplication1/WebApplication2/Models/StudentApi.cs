@@ -11,23 +11,30 @@ namespace WebApplication2.Models
 
         Male,
         Female,
+
+
+
     }
 
-    public class StudentApi
+    public class Student
     {
-        public class Student
-        {
-            [Key]
-            public string Name { get; set; }
-            [required]
-            public int TypeGender { get; set; }
-            [required]
-            public int Birthday { get; set; }
+        [Key]
+        public int StudentID { get; set; }
 
+        [required]
+        public string Name { get; set; }
 
+        [required]
+        public TypeGender Gender { get; set; }
 
-        }
+        [required]
+        [DataType(DataType.Date)]
+
+        public int Birthday { get; set; }
+        [required]
+        public virtual ICollection<Grades> Grades { get; set; }
 
 
     }
+
 }
